@@ -1,0 +1,75 @@
+/* stylelint-disable-next-line keyframes-name-pattern */
+@keyframes flareAnimation {
+  0% {
+    left: -150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 37px;
+  margin: 32px $margin-xs 40px;
+
+  &__logo {
+    display: flex;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      &::before {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+        transform: skewX(-45deg);
+        animation: flareAnimation 2s infinite linear;
+      }
+    }
+
+    &__img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__search-wrapper {
+    height: 100%;
+  }
+
+  &__search-btn {
+    @include hover();
+    width: 29px;
+    height: 29px;
+    border: none;
+    background:
+      url('../img/search.svg') no-repeat center / auto,
+      $transparent-color;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .header {
+    margin: 33px $margin-sm 47px;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .header {
+    margin: 32px $margin-lg 72px;
+  }
+}
