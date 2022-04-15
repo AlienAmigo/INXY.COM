@@ -1,18 +1,45 @@
 .page {
-  font-family: $font-family;
+  font-family: $font-family-serif;
 
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
-    &::selection {
+    body {
+      display: flex;
+      flex-direction: column;
+      min-width: 100vw;
+      min-height: 100vh;
+      background-color: $bg-color;
+      overflow-x: hidden;
     }
   }
 
-  &__inner {}
+  &__inner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
 
-  &__content {}
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
 
-  &__footer-wrapper {}
+  &__footer-wrapper {
+    display: none;
+
+    @media screen and (min-width: $screen-lg) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white-color;
+      padding: 31px;
+      color: $black20-color;
+    }
+  }
 }

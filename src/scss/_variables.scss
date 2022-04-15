@@ -1,20 +1,23 @@
-$main-color:          #7dcbcf;
-$warning-color:       #fdc05d;
-
-$white-color:         #ffffff;
+$bg-color:            #fdfdfd;
+$white-color:         #f8f8f8;
 
 $gray-light:          #f2f2f2;
-$gray-dark:           #231f20;
+$black20-color:       #949494;
+$black40-color:       #6c6c6c;
+$black60-color:       #444444;
+$black80-color:       #121212;
 
-$text-color:          $gray-dark;
+$text-color:          $black60-color;
 
 $transparent-color:   rgba(255, 255, 255, 0);
 
-$font-family:         -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+$font-family-sans:    Roboto, Arial, 'Helvetica Neue', sans-serif;
+$font-family-serif:   PlayfairDisplay, Georgia, serif;
+
 $font-size:           14px;
 $line-height:         1.4;
 
 $screen-xs:           480px;
 $screen-sm:           768px;
 $screen-md:           992px;
-$screen-lg:           1200px;
+$screen-lg:           1440px;
