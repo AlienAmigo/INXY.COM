@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <title>NewsPortal | Latest News</title>
   </head>
   <body>
@@ -14,11 +14,17 @@
       <div class="page__content">
         <header class="header">
           <a href="/" class="header__logo">
-            <img src="img/logo.svg" alt="NewsPortal Logo" class="header__logo-img"/>
+            <img
+              src="img/logo.svg"
+              alt="NewsPortal Logo"
+              class="header__logo-img" />
           </a>
           <div class="header__search-wrapper">
             <form method="POST" action="" class="seacrh-form"></form>
-            <button id="search-button" class="header__search-btn" type="button"></button>
+            <button
+              id="search-button"
+              class="header__search-btn"
+              type="button"></button>
           </div>
         </header>
         <main>
@@ -27,27 +33,34 @@
               <h1 class="page__title">Latest News</h1>
               <div class="latest-news__date-sort-wrapper">
                 <div class="latest-news__date">
-                  <span>Friday,&nbsp;</span>February 18, 2022
+                  <span class="latest-news__day-of-week">Friday,&nbsp;</span>February 18, 2022
                 </div>
                 <button class="latest-news__sort-btn" type="button"></button>
               </div>
             </div>
+            <div class="latest-news__news-wrapper">
+              <article class="news-item">
+                <div class="news__item__pic-wrapper">
+                  <picture>
+                    <img src="img/news01.jpg" alt="" class="news-item__img" />
+                  </picture>
+                </div>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">03.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <p class="news-item__text">
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  vestibulum ornare adipiscing. Pellentesque sed turpis nunc
+                  gravida pharetra, sit nec turpis vivamus pharetra.
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+            </div>
           </section>
-          <article class="news-item">
-            <div class="news__item__pic-wrapper">
-              <picture>
-                <img src="img/news01.jpg" alt="" class="news-item__img" />
-              </picture>
-            </div>
-            <div class="news-item__date-source-wrapper">
-              <div class="news-item__date">03.12.2021</div>
-              <div class="news-item__source">CNN Indonesia</div>
-            </div>
-            <h2 class="news-item__title">News Title Lorem Ipsum Dolor Sit Amet</h2>
-            <p class="news-item__text">Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam vestibulum ornare
-              adipiscing. Pellentesque sed turpis nunc gravida pharetra, sit nec turpis vivamus pharetra.</p>
-            <a href="#" class="news-item__read-more-link">read more</a>
-          </article>
         </main>
       </div>
       <footer class="page__footer-wrapper">Copyright 2022 News Portal</footer>

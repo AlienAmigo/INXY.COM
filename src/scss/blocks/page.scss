@@ -30,16 +30,33 @@
     flex-direction: column;
   }
 
+  &__title {
+    font-family: $font-family-sans;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $black80-color;
+  }
+
   &__footer-wrapper {
     display: none;
+  }
+}
 
-    @media screen and (min-width: $screen-lg) {
+@media screen and (min-width: $screen-lg) {
+  .page {
+    &__footer-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: $white-color;
       padding: 31px;
       color: $black20-color;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 42px;
     }
   }
 }
