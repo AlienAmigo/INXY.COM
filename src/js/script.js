@@ -7,5 +7,10 @@ function ready(fn) {
 }
 
 ready(function(){
-  console.log('DOM ready');
+  const SortBtn = document.querySelector('#sort-btn');
+  if (SortBtn) {
+    SortBtn.addEventListener('click', () => {
+      SortBtn.classList.toggle('active');
+    });
+  }
 });

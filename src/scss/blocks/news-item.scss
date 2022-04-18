@@ -33,7 +33,7 @@
 
   &__title {
     @include paragraph-text-overflow(3);
-    height: 63px;
+    max-height: 63px;
     margin: 8px 0 12px;
     font-weight: 700;
     font-size: 16px;
@@ -67,7 +67,7 @@
 
   &__text {
     @include paragraph-text-overflow(4);
-    height: 72px;
+    max-height: 72px;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;

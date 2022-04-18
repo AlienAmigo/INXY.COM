@@ -36,6 +36,12 @@
       url('../img/sort.svg') no-repeat center / auto,
       $transparent-color;
     cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s linear;
+
+    &.active {
+      transform: rotate(180deg);
+    }
   }
 
   &__news-wrapper {
