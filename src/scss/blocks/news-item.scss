@@ -3,6 +3,8 @@
   flex-direction: column;
   width: calc((100% - #{$gap-xs}) / 2);
   margin-bottom: 32px;
+  visibility: visible;
+  animation: fadeIn 0.45s ease-in;
 
   &:nth-of-type(5),
   &:nth-of-type(6),
@@ -88,6 +90,10 @@
     font-size: 12px;
     line-height: 150%;
     color: #000000;
+  }
+
+  &.invisible {
+    visibility: hidden;
   }
 }
 

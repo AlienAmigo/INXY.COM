@@ -26,8 +26,10 @@ ready(function () {
   };
 
   if (SearchTrigger && SearchForm) {
+    const SearchFormInput = SearchForm.querySelector('.search-form__input');
     SearchForm.addEventListener('submit', ev => {
       ev.preventDefault();
+      SearchFormInput.value = '';
       ToggleForm();
     });
 

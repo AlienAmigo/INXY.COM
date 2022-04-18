@@ -75,7 +75,9 @@
 
 @media screen and (min-width: $screen-xl) {
   .latest-news {
-    margin: 0 $margin-lg 24px;
+    max-width: calc(#{screen-xl} - 2 * #{margin-lg});
+    margin: 0 auto 24px;
+    padding: 0 $margin-lg;
   }
 }
 
