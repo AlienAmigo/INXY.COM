@@ -1,3 +1,62 @@
+@keyframes grow-right {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 .search-form {
   display: none;
+  align-items: center;
+  align-self: center;
+  justify-content: flex-end;
+  width: 200px;
+  animation: grow-right 0.5s linear;
+
+  &__input {
+    @include text-overflow();
+    display: flex;
+    flex: 1;
+    border: none;
+    outline: 0;
+    font-family: $font-family-sans;
+    font-size: 14px;
+
+    &::placeholder {
+      font-family: $font-family-sans;
+      font-size: 14px;
+      opacity: 1;
+      transition: opacity 0.25s ease-in;
+    }
+
+    &:focus-within {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__submit-btn {
+    @include hover();
+    width: 29px;
+    height: 29px;
+    border: none;
+    background:
+      url('../img/search.svg') no-repeat center / auto,
+      $transparent-color;
+    cursor: pointer;
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+  .search-form {
+    width: 200px;
+  }
 }

@@ -6,13 +6,27 @@
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#aaaaaa">
-    <meta name="msapplication-TileColor" content="#aaaaaa">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="img/favicon/safari-pinned-tab.svg"
+      color="#aaaaaa" />
+    <meta name="msapplication-TileColor" content="#aaaaaa" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="css/style.css" />
     <title>NewsPortal | Latest News</title>
   </head>
@@ -27,9 +41,12 @@
               class="header__logo-img" />
           </a>
           <div class="header__search-wrapper">
-            <form method="POST" action="" class="seacrh-form"></form>
+            <form method="POST" action="" class="search-form" id="search-form">
+              <input type="text" class="search-form__input" placeholder="Search..."/>
+              <button type="submit" class="search-form__submit-btn"></button>
+            </form>
             <button
-              id="search-button"
+              id="search-trigger"
               class="header__search-btn"
               type="button"></button>
           </div>
@@ -40,16 +57,27 @@
               <h1 class="page__title">Latest News</h1>
               <div class="latest-news__date-sort-wrapper">
                 <div class="latest-news__date">
-                  <span class="latest-news__day-of-week">Friday,&nbsp;</span>February 18, 2022
+                  <span class="latest-news__day-of-week">Friday,&nbsp;</span
+                  >February 18, 2022
                 </div>
-                <button class="latest-news__sort-btn" type="button" id="sort-btn"></button>
+                <button
+                  class="latest-news__sort-btn"
+                  type="button"
+                  id="sort-btn"></button>
               </div>
             </div>
             <div class="latest-news__news-wrapper">
               <article class="news-item">
                 <div class="news-item__pic-wrapper">
                   <picture>
-                    <img src="img/news01.png" alt="" class="news-item__img" />
+                    <source
+                      srcset="img/news01-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news01.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
                   </picture>
                 </div>
                 <h2 class="news-item__title">
@@ -63,6 +91,209 @@
                   Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
                   vestibulum ornare adipiscing. Pellentesque sed turpis nunc
                   gravida pharetra, sit nec turpis vivamus pharetra.
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news02-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news02.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">11.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Velit, dui, egestas nisi, elementum mattis mauris, magnis.
+                  Massa tortor nibh nulla condimentum imperdiet scelerisque...
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra.
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news03-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news03.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">11.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra. Velit, dui, egestas nisi,
+                  elementum mattis mauris, magnis. Massa tortor nibh nulla
+                  condimentum imperdiet scelerisque...
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news04-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news04.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">11.11.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra. Velit, dui, egestas nisi,
+                  elementum mattis mauris, magnis. Massa tortor nibh nulla
+                  condimentum imperdiet scelerisque...
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news05-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news05.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">26.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra. Velit, dui, egestas nisi,
+                  elementum mattis mauris, magnis. Massa tortor nibh nulla
+                  condimentum imperdiet scelerisque...
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news06-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news06.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">11.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Massa tortor nibh nulla condimentum imperdiet scelerisque...
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra. Velit, dui, egestas nisi,
+                  elementum mattis mauris, magnis.
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news07-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news07.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">15.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Velit, dui, egestas nisi, elementum mattis mauris, magnis.
+                  Massa tortor nibh nulla condimentum imperdiet scelerisque...
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra.
+                </p>
+                <a href="#" class="news-item__read-more-link">read more</a>
+              </article>
+              <article class="news-item">
+                <div class="news-item__pic-wrapper">
+                  <picture>
+                    <source
+                      srcset="img/news08-sm.png"
+                      media="(max-width: 768px)" />
+                    <img
+                      src="img/news08.png"
+                      alt=""
+                      loading="lazy"
+                      class="news-item__img" />
+                  </picture>
+                </div>
+                <h2 class="news-item__title">
+                  News Title Lorem Ipsum Dolor Sit Amet
+                </h2>
+                <div class="news-item__date-source-wrapper">
+                  <div class="news-item__date">06.12.2021</div>
+                  <div class="news-item__source">CNN Indonesia</div>
+                </div>
+                <p class="news-item__text">
+                  Nisi, sagittis aliquet sit rutrum. Nunc, id vestibulum quam
+                  ornare adipiscing. Pellentesque sed turpis nunc gravida
+                  pharetra, sit nec vivamus pharetra. Velit, dui, egestas nisi,
+                  elementum mattis mauris, magnis. Massa tortor nibh nulla
+                  condimentum imperdiet scelerisque...
                 </p>
                 <a href="#" class="news-item__read-more-link">read more</a>
               </article>

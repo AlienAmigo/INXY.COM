@@ -46,6 +46,7 @@
 
   &__news-wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
   }
@@ -71,3 +72,10 @@
     margin: 0 $margin-lg 24px;
   }
 }
+
+@media screen and (min-width: $screen-xl) {
+  .latest-news {
+    margin: 0 $margin-lg 24px;
+  }
+}
+

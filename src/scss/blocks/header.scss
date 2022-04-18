@@ -13,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
   height: 37px;
   margin: 32px $margin-xs 40px;
 
@@ -47,6 +48,8 @@
   }
 
   &__search-wrapper {
+    display: flex;
+    align-items: center;
     height: 100%;
   }
 
@@ -59,12 +62,22 @@
       url('../img/search.svg') no-repeat center / auto,
       $transparent-color;
     cursor: pointer;
+
+    &.disable {
+      display: none;
+    }
   }
 }
 
 @media screen and (min-width: $screen-sm) {
   .header {
     margin: 33px $margin-sm 47px;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .header {
+    margin: 32px $margin-lg 72px;
   }
 }
 
