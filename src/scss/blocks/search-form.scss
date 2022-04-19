@@ -1,6 +1,6 @@
 @keyframes grow-right {
   0% {
-    width: 0;
+    width: 28px;
   }
 
   100% {
@@ -13,7 +13,13 @@
   align-items: center;
   align-self: center;
   justify-content: flex-end;
-  width: 150px;
+  width: auto;
+  max-width: 140px;
+  max-height: 35px;
+  margin-left: auto;
+  border: 1px solid $transparent-color;
+  border-radius: 5px;
+  padding: 0 0 0 5px;
   animation: grow-right 0.5s linear;
 
   &__input {
@@ -52,11 +58,18 @@
 
   &.active {
     display: flex;
+    border-color: $black20-color;
+    transition: border 1s ease-in;
+
+    &:focus-within {
+      border: 1px solid $black80-color;
+    }
   }
 }
 
 @media screen and (min-width: $screen-sm) {
   .search-form {
     width: 200px;
+    max-width: 200px;
   }
 }
